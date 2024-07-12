@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: "Gabarito", sans-serif;
+
+}
+
+.navbar{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid black 1px;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; 
+     z-index: 1;
+    }
+    .navbar__s1__title{
+        color: #A435F0;
+    }
+    .navbar__s2{
+        padding: 10px;
+        border: solid black 1px;
+        border-radius: 30px;
+        width: 60%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .navbar__s2 input{
+        border: none;
+        width: 100%;
+        font-size: 16px;
+        background-color: transparent;
+        
+    }
+    .navbar__s2 input:focus{
+        outline: none;
+    }
+    .navbar__s3{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        gap: 20px;
+        align-items: center;
+        
+    }
+
+    .categories{
+        display: flex;
+        padding: 10px;
+        border-bottom: solid black 1px;
+        justify-content: space-around;
+        cursor: pointer;        
+    }
+
+    .categories p{
+            background-color: #A435F0;
+            color: white;
+            padding: 10px;
+            border-radius: 30px;
+            border: solid #A435F0 1px ;
+
+    }
+
+    .categories p:hover{
+        background: transparent;
+        border: solid #A435F0 1px ;
+        color: black;
+         transition-duration: 1s;
+
+    }
+.sale-image{
+    position: relative;
+    
+
+}
+    .sale-image img{
+        width: 100%;
+    }
+    .course_card img{
+        width: 200px;
+    }
+
+    .course_card{
+        width: 250px;
+        padding: 10px;
+        margin-top: 5px;
+     }
+     .recommened__container{
+        padding-left: 10px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+     }
+     .recommeneded__title,.recommeneded__title__s2{
+        padding-left: 30px;
+     }
+     .recommended{
+                margin-top: 10px;
+                 
+
+     }
+     .topics{
+        padding: 20px;
+     }
+     .topics__container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+
+     }
+     .topics__title{
+        padding-left: 5px;
+     }
+
+     .topics__container p{
+         border: solid gray 2px;
+         padding: 10px;
+         flex-grow: 1;
+         flex-basis: 25%;
+        
+     }
+     
+     .popular{
+        padding: 20px;
+     }
+     .popular__title,.popular__subtitle{
+        padding-left: 10px;
+     }
+
+
+
+     .popular__container{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+         justify-content: space-between;
+    }
+    .footer{
+        background-color: black;
+        color: white;
+    }
+
+    .footer_one{
+        display: flex;
+        gap: 10px;
+        padding: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+         
+    }
+
+    .footer_one p{
+        margin: 10px;
+    }
+    .footer_two{
+        display: flex;
+        justify-content: space-between;
+         align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+    .page{
+        background-color: white;
+        border: solid black 2px;
+        padding: 25px;
+        width: 400px;
+        position: absolute;
+        top: 20%;
+        left: 7%;
+        opacity: 0;
+        animation-name: popup;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        height: 80px;
+        padding-bottom: 40px;
+    }
+    @keyframes popup {
+        0%{
+            opacity: 0;
+            transform: scale(0);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+    }
+
+    .learning__para{
+        background-color: white;
+        border: solid black 2px;
+        width: 90px;
+        padding: 20px;
+        position: absolute;
+        top: 160%;
+        right: 2px;
+        display: none;
+      
+    }
+    .learning{
+        position: relative;
+    }
+     .learning:hover .learning__para{
+        display: block;
+     }
+     @media  screen and (max-width:800px) {
+        body{
+         font-size: 10px;
+        }
+        .page{
+         width: 200px;
+         height: inherit;
+         padding: -10px;
+ 
+        }
+      
+         
+      }
+ 
+      @media  screen and (max-width:600px) {
+         .course_card{
+ 
+             flex-basis: 20%;
+ 
+         }
+         .categories{
+             display: none;
+ 
+         }
+         .navbar__s2,.navbar__s3{
+             display: none;
+         }
+         .page{
+             width: 150px;
+             height: fit-content;
+             padding: 10px;
+         }
+         .navbar .nomie i{
+            display: block;
+         }
+         
+      }
+
+      @media  screen and (min-width:600px) {
+       .nomie{
+        display: none;
+     } 
+      }
+     
